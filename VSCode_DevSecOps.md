@@ -6,19 +6,33 @@
 
 ## 工具环境
 
-- 安装 [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+- [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+    - 推荐 2026/2022 Community 版本
     - Community/Professional/Enterprise 择一即可（勾选【.NET 桌面开发】和【ASP.NET 与网页开发】工作负载，并在各个组件中启用 Roslyn 分析器；课程演示静态分析和整合 SonarLint 扩展需要此环境）
-- 安装 [Visual Studio Code](https://code.visualstudio.com/)
+
+- [Microsoft .NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+    - .NET 程序运行时
+    - 提供示例项目编译与 SonarScanner for .NET 所需的 CLI（命令行工具）
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+    - 轻量级 IDE（可用于 .NET、Java、JavaScript）
     - 安装 SonarLint 插件，以在轻量编辑器中实时检查代码质量与安全性
-- 安装 [Microsoft .NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
-    - 提供示例项目编译与 SonarScanner for .NET 所需的 CLI
-- 下载 [SonarQube Community Edition](https://www.sonarsource.com/products/sonarqube/downloads/) 和 [SonarScanner for .NET](https://docs.sonarsource.com/sonarqube-server/9.8/analyzing-source-code/scanners/sonarscanner-for-dotnet/)
-    - 课程中会指导安装。（本地 SAST 服务器建议通过 Docker 或 zip 包启动）以及将 .NET 项目分析结果上传到 SonarQube。
-- 下载 [OWASP Dependency-Check CLI](https://owasp.org/www-project-dependency-check/)
+
+- [Java SE Development Kit 17.0.12](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+    - 提供 Java 运行时，用于本地运行 SonarQube
+    - 可以先下载 zip 包，课程中指导安装配置
+
+- [SonarQube Community Edition](https://www.sonarsource.com/products/sonarqube/downloads/) 和 [SonarScanner for .NET](https://docs.sonarsource.com/sonarqube-server/9.8/analyzing-source-code/scanners/sonarscanner-for-dotnet/)
+    - 下载即可，课程中会指导安装。（本地 SAST 服务器建议通过 Docker 或 zip 包启动）以及将 .NET 项目分析结果上传到 SonarQube。
+
+- [OWASP Dependency-Check CLI](https://owasp.org/www-project-dependency-check/)
     - 下载安装即可，课程中指导安装。（SCA 扫描工具，识别第三方组件中的已知漏洞）
-- 下载 [OWASP ZAP](https://www.zaproxy.org/download/)
+
+- [OWASP ZAP](https://www.zaproxy.org/download/)
     - 下载即可，课程中指导安装。（DAST与渗透测试示范工具，执行基本攻击模拟）
-- 下载 [Git for Windows](https://gitforwindows.org/) 以及 [gitleaks](https://github.com/gitleaks/gitleaks)
+
+- [Git for Windows](https://gitforwindows.org/) 以及 [gitleaks](https://github.com/gitleaks/gitleaks)
+    - 需要一个 GitHub 账号（用于执行 GitHub Action/管道）
     - 下载即可，课程中指导安装。（版本控制与机密泄露扫描工具组，用于教学情境中的凭证检测）
 
 ## 课程大纲
@@ -38,9 +52,9 @@
 
 - 代码安全与 DevSecOps 基础理念
 - VS/VSCode 安全插件及 lint 工具实操
-- 静态应用安全测试（SAST）原理与实战演练
 - 集成 SonarQube 等静态代码分析工具，提升 .NET 项目代码质量与安全性
 - 机密泄漏防护：凭证检测与安全提交流程规范
+- 静态应用安全测试（SAST）原理与实战演练
 
 - 实践：提交代码并进行安全扫描
 
