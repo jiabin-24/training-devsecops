@@ -1,4 +1,4 @@
-# VSCode DevSecOps 课程文档
+# DevSecOps 课程介绍&计划
 
 ## 课程介绍
 
@@ -63,7 +63,7 @@
 **主题：自动化安全检测与持续集成实践**
 
 - 软件组成分析（SCA）：识别不安全的第三方套件
-- 使用 OWASP Dependency-Check 工具进行依赖项扫描
+- 使用 OWASP（Open Web Application Security Project）Dependency-Check 工具进行依赖项扫描
 - 渗透测试与动态应用安全测试（DAST）概念
 - 使用 OWASP ZAP 工具进行简易渗透测试
 - 案例分享：如何在 VS 及 VS Code 项目中导入安全性检测流程
