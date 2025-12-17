@@ -87,4 +87,4 @@
 
 ## 附：初始計畫
 
-![origin-agenda](./images/origin-agenda.png)
+![origin-agenda](../images/origin-agenda.png)

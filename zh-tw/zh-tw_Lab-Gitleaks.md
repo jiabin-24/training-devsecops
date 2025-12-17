@@ -19,7 +19,7 @@ Gitleaks 是一款開源的敏感資訊/金鑰洩露掃描工具（Secret Scanne
 
 在 Releases 中選擇最新的版本，展開並點選 `gitleaks_x.x.x_windows_x64.zip`（此處以 Windows 為例）
 
-![gitleaks-install](./images/gitleaks-install.png)
+![gitleaks-install](../images/gitleaks-install.png)
 
 下載並解壓到本地目錄後，可以將其加入系統環境變數（可選），執行以下命令以驗證安裝完成
 ```bash
@@ -40,11 +40,11 @@ gitleaks detect -s D:\workspace\xxx -r D:\gitleaks_report.json --no-git
 - -r：報告輸出路徑，預設為 json 格式
 - --no-git：不以 Git 倉庫方式掃描，而是直接掃描檔案系統中的檔案，不會讀取 Git 歷史、commit、diff 等內容
 
-![gitleaks-scan](./images/gitleaks-scan.png)
+![gitleaks-scan](../images/gitleaks-scan.png)
 
 檢視輸出的 JSON 檔案
 
-![gitleaks-output](./images/gitleaks-output.png)
+![gitleaks-output](../images/gitleaks-output.png)
 
 ### 自訂設定 .gitleaks.toml
 
@@ -113,7 +113,7 @@ regexes = [
 gitleaks detect --config=.gitleaks.toml
 ```
 
-![gitleaks-with-config](./images/gitleaks-scan-with-config.png)
+![gitleaks-with-config](../images/gitleaks-scan-with-config.png)
 
 ### 後續
 

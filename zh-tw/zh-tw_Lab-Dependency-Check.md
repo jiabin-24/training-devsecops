@@ -33,7 +33,7 @@ NVD 的更新頻率是發生問題即時更新，具體連結：<https://nvd.nis
 set JAVACMD=C:\Program Files\Java\jdk-17.0.12\bin\java.exe
 ```
 
-![dependency-check-config](./images/dependency-check-config.png)
+![dependency-check-config](../images/dependency-check-config.png)
 
 #### 4. 下載 NVD 資料庫
 執行以下命令
@@ -41,7 +41,7 @@ set JAVACMD=C:\Program Files\Java\jdk-17.0.12\bin\java.exe
 dependency-check.bat --nvdApiKey=your_api_key_here --updateonly
 ```
 
-![nvd-download](./images/nvd-download.png)
+![nvd-download](../images/nvd-download.png)
 
 #### 5. 掃描打包應用並生成報告
 
@@ -68,11 +68,11 @@ dependency-check.bat -n --project "dll-scan" --scan "D:\dotnet-app\MyLib.dll" -o
 
 .NET 還可以掃描 .exe、.deps.json（推薦） 甚至是包含以上檔案的目錄
 
-![dependency-check-dotnet](./images/dependency-check-dotnet.png)
+![dependency-check-dotnet](../images/dependency-check-dotnet.png)
 
 #### 6. 檢視報告
 
-![dependency-check-result](./images/dependency-check-result.png)
+![dependency-check-result](../images/dependency-check-result.png)
 
 - dependency-check version（工具版本）：12.1.9
 - Report Generated On（報告生成時間）：Wed, 17 Dec 2025 00:59:22 +0800

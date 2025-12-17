@@ -38,7 +38,7 @@ GitHub 是一個基於雲端的程式碼託管平台，使用 Git 作為版本�
 
 > [SonarQube Server download](https://www.sonarsource.com/products/sonarqube/downloads/)，下載最新版本
 
-![sonarqube-download](./images/sonarqube-download.png)
+![sonarqube-download](../images/sonarqube-download.png)
 
 ### 1、本機安裝 Java JDK 17（用於執行 SonarQube Server）
 
@@ -46,23 +46,23 @@ GitHub 是一個基於雲端的程式碼託管平台，使用 Git 作為版本�
 
 將 zip 套件下載到本機之後，解壓縮放置於例如 `C:\Program Files\Java`
 
-![jdk-location](./images/jdk-location.png)
+![jdk-location](../images/jdk-location.png)
 
 打開系統設定 -> 環境變數
 
-![system-variable](./images/system-variable.png)
+![system-variable](../images/system-variable.png)
 
 在環境變數中新增 `JAVA_HOME` 並設定值為上一步解壓後的資料夾路徑（此處為 `C:\Program Files\Java\jdk-17.0.12`）
 
-![java-home](./images/java-home.png)
+![java-home](../images/java-home.png)
 
 編輯 `Path` 環境變數，加入 `%JAVA_HOME%\bin`
 
-![java-bin](./images/java-bin.png)
+![java-bin](../images/java-bin.png)
 
 此時，打開 PowerShell/CMD，輸入 `java -version`，應能看到已安裝並設定的 Java 版本
 
-![ps-java-version](./images/ps-java-version.png)
+![ps-java-version](../images/ps-java-version.png)
 
 ### 2、設定 SonarQube Server
 
@@ -70,17 +70,17 @@ GitHub 是一個基於雲端的程式碼託管平台，使用 Git 作為版本�
 
 我們將 `sonar.embeddedDatabase.port=9092` 取消註解，表示使用內建的 H2 資料庫（無需另行安裝資料庫管理工具，即可使用）。如果你本機之前已安裝 MySQL/SQL Server，也可以取消相應的設定，以讓 SonarQube 連接到這些資料庫（注意：不建議在生產環境使用內建的 H2 資料庫，H2 僅用於個人測試、示範使用）。
 
-![sonarqube-conf](./images/sonar-config.png)
+![sonarqube-conf](../images/sonar-config.png)
 
 ### 3、啟動 SonarQube Server
 
 定位到 SonarQube Server 的 `bin\windows-x86-64` 目錄（若為其他作業系統請定位到相應目錄），在該資料夾開啟命令列工具（例如：PowerShell）
 
-![start-sonar](./images/start-sonar.png)
+![start-sonar](../images/start-sonar.png)
 
 執行 `./StartSonar.bat`，以啟動 SonarQube Server。啟動成功截圖如下
 
-![start-sonar-success](./images/start-sonar-success.png)
+![start-sonar-success](../images/start-sonar-success.png)
 
 注意：若啟動失敗，可查看 `\logs` 資料夾下的日誌檔以定位失敗原因（例如：`\logs\web.log`）
 
@@ -98,7 +98,7 @@ GitHub 是一個基於雲端的程式碼託管平台，使用 Git 作為版本�
 - 可視化分析儀表板（Overview、Measures、Activity）
 - 問題管理（Issues 管理、規則、指派）
 
-![sonar-home](./images/sonar-home-page.png)
+![sonar-home](../images/sonar-home-page.png)
 
 ***
 
@@ -108,35 +108,35 @@ GitHub 是一個基於雲端的程式碼託管平台，使用 Git 作為版本�
 
 如圖，先建立一個本機專案（讀取本機程式碼）
 
-![create-local-project](./images/create-sonar-project.png)
+![create-local-project](../images/create-sonar-project.png)
 
 填寫專案名稱（key、branch 使用自動生成的即可），然後下一步
 
-![create-local-project-detail](./images/create-sonar-project-2.png)
+![create-local-project-detail](../images/create-sonar-project-2.png)
 
 選擇預設的設定即可（當然也可以選擇自訂的規則），點選【Create project】
 
-![create-local-project-strategy](./images/create-sonar-project-3.png)
+![create-local-project-strategy](../images/create-sonar-project-3.png)
 
 ### 2、設定專案
 
 建立專案完成後，會彈出 `Analysis Method` 頁面，選擇 `Locally`
 
-![bind-project](./images/bind-project.png)
+![bind-project](../images/bind-project.png)
 
 產生專案權杖（使用預設填入的資訊即可），直接點選【Generate】（注意：產生權杖後請即時將該權杖儲存到本機，後續無法再於 SonarQube 頁面中檢索該權杖）
 
-![create-token](./images/create-token.png)
+![create-token](../images/create-token.png)
 
 依照你的程式碼情況，選擇合適的分析步驟（此處以 .NET 為例；若為其他框架例如 Java，可選擇相應的 Tab - Maven），根據提示執行相應命令
 
-![analysis-code](./images/analysis-code.png)
+![analysis-code](../images/analysis-code.png)
 
 ### 3、檢視專案程式碼檢查結果
 
 依上述步驟對專案程式碼執行分析並上傳到 SonarQube Server 後，就可以在頁面中檢視程式碼的各項指標。也可以進入具體的維度分頁查看清單與詳細內容
 
-![project-overview](./images/project-overview.png)
+![project-overview](../images/project-overview.png)
 
 ***
 
@@ -150,11 +150,11 @@ GitHub 是一個基於雲端的程式碼託管平台，使用 Git 作為版本�
 
 打開 GitHub，進入個人設定 Settings
 
-![github-setting](./images/github-setting.png)
+![github-setting](../images/github-setting.png)
 
 在設定頁面底部，點選【Developer settings】，再新建一個「GitHub App」
 
-![github-developer-setting](./images/github-develop-setting.png)
+![github-developer-setting](../images/github-develop-setting.png)
 
 填寫以下資訊（請依自身情況調整）：
 - GitHub App name：SonarQube Integration Local
@@ -166,7 +166,7 @@ GitHub 是一個基於雲端的程式碼託管平台，使用 Git 作為版本�
 
 針對 Permissions，選擇以下權限
 
-![github-app-permission](./images/github-app-permission.png)
+![github-app-permission](../images/github-app-permission.png)
 
 點選【Create GitHub App】，建立完成後再點選安裝該 App
 
@@ -183,24 +183,24 @@ GitHub 是一個基於雲端的程式碼託管平台，使用 Git 作為版本�
 - Client Secret：上一步生成的值
 - Private Key：上一步生成的值
 
-![sonar-github-config](./images/sonar-github-config.png)
+![sonar-github-config](../images/sonar-github-config.png)
 
 設定完成後，即可檢索你 GitHub 帳號中的儲存庫，選擇要匯入到 SonarQube Server 的專案（注意：此時專案尚未有程式碼相關的檢查資訊，需進一步設定 GitHub Action）
 
-![import-github-proj](./images/import-github-project.png)
+![import-github-proj](../images/import-github-project.png)
 
 ### 3、將 SonarQube 整合到 GitHub Action 管道中
 
 在建立出的專案 - Analysis Method 中，選擇【With GitHub Actions】
 
-![sonar-github-action](./images/sonar-github-action.png)
+![sonar-github-action](../images/sonar-github-action.png)
 
 依照彈出頁面的指示完成管道設定
 
 - 生成儲存庫的設定檔
 - 針對具體程式語言，加入對應的 action yaml 檔案
 
-![sonar-github-step](./images/sonar-github-step.png)
+![sonar-github-step](../images/sonar-github-step.png)
 
 ### 4、將本機埠映射到 Internet
 
@@ -220,10 +220,10 @@ tunnels:
 
 執行 `ngrok start --all --config ngrok.yml`，然後在 GitHub Repo 的 secret 中，將 `SONAR_HOST_URL` 設定為該域名
 
-![ngrok-url](./images/ngrok-url.png)
+![ngrok-url](../images/ngrok-url.png)
 
 ### 提交程式碼，或手動觸發 GitHub 管道
 
 將程式碼掃描結果隨每次程式碼提交上傳到 SonarQube Server
 
-![github-action-statue](./images/github-action-statue.png)
+![github-action-statue](../images/github-action-statue.png)
