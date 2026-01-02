@@ -31,7 +31,7 @@
 - [OWASP ZAP](https://www.zaproxy.org/download/)
     - 下载即可，课程中指导安装。（DAST与渗透测试示范工具，执行基本攻击模拟）
 
-- [Git for Windows](https://gitforwindows.org/) 以及 [gitleaks](https://github.com/gitleaks/gitleaks)
+- [Git for Windows](https://gitforwindows.org/) 以及 [Gitleaks](https://github.com/gitleaks/gitleaks) - 机密扫描工具
     - 需要一个 GitHub 账号（用于执行 GitHub Action/管道）
     - 下载即可，课程中指导安装。（版本控制与机密泄露扫描工具组，用于教学情境中的凭证检测）
 
